@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+
+{% block start %}
+<div class="container mt-5">
+    <h2 class="mb-4">My Orders</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Customer Email</th>
+                <th>Address</th>
+                {% comment %} <th>Quantity</th> {% endcomment %}
+                <th>Total Price</th>
+                <th>Payment Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.customer_name }}</td>
+                <td>{{ order.customer_email }}</td>
+                <td>{{ order.customer_address }}</td>
+                {% comment %} <td>{{ order.quantity }}</td> {% endcomment %}
+                <td>{{ order.amount }} Tk</td>
+                <td>{{ order.payment_method }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

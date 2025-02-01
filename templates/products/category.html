@@ -1,0 +1,37 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block start %}
+
+    <!-- Display Results Based on Search -->
+    <div class="container mt-5 pt-5">
+    <div class="row">
+        {% if product %}
+            {% for product in product %}
+                <div class="col-md-3">
+                    <figure class="card card-product-grid">
+                        <div class="img-wrap">
+                            {% if product.product_images.first %}
+                                <img src="/media/{{ product.product_images.first.image }}" alt="{{ product.product_name }}">
+                            {% else %}
+                                <img src="{% static 'images/no_image.png' %}" alt="No image available">
+                            {% endif %}
+                        </div>
+                        <figcaption class="info-wrap border-top">
+                            <a href="{% url 'get_product' product.slug %}" class="title">
+                                <b>{{ product.product_name }}</b>
+                            </a>
+                            <div class="price mt-2">Per kg cost: {{ product.per_kg_cost }} Tk</div>
+                        </figcaption>
+                    </figure>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12">
+                <p>No products found for the selected category.</p>
+            </div>
+        {% endif %}
+    </div>
+
+</div>
+</div>
+{% endblock %}

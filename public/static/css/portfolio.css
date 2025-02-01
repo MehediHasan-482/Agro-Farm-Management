@@ -1,0 +1,194 @@
+/* Global Settings */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #2C3E50;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.portfolio-items {
+    flex: 1;
+    padding: 20px;
+}
+
+.farm-overview {
+    flex: 0 0 300px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title and Description */
+.portfolio-header h2 {
+    font-size: 1.8em;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.portfolio-description p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Vision & Mission */
+.portfolio-vision,
+.portfolio-mission {
+    background: #ecf0f1;
+    border-left: 5px solid #3498db;
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.portfolio-vision h3,
+.portfolio-mission h3 {
+    font-size: 1.3em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.portfolio-vision p,
+.portfolio-mission p {
+    font-size: 1em;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Farm Overview Section */
+.farm-overview {
+    background: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.farm-overview h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #34495e;
+}
+
+.overview-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.overview-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overview-image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Document Section */
+.portfolio-document,
+.portfolio-health-document {
+    background: #f9f9f9;
+    border-left: 5px solid #16a085;
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.portfolio-document h4,
+.portfolio-health-document h4 {
+    font-size: 1.3em;
+    color: #16a085;
+    margin-bottom: 10px;
+}
+
+.portfolio-document p,
+.portfolio-health-document p {
+    font-size: 1em;
+    color: #7f8c8d;
+}
+
+/* Download Link Style */
+.download-link {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.download-link:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+    }
+
+    .farm-overview {
+        margin-top: 20px;
+    }
+
+    .overview-images {
+        grid-template-columns: 1fr;
+    }
+}

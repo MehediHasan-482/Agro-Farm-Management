@@ -1,0 +1,124 @@
+/* General styles for the cart page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Table styles */
+.table-shopping-cart {
+    margin: 20px 0;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.table-shopping-cart th {
+    background-color: #f8f9fa;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.table-shopping-cart td {
+    vertical-align: middle;
+}
+
+.table-shopping-cart .itemside .aside img {
+    border-radius: 4px;
+    max-width: 80px;
+    height: auto;
+}
+
+.price-wrap .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.price-wrap small {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Buttons */
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    font-weight: bold;
+    color: #6c757d;
+    transition: all 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-primary {
+    font-weight: bold;
+    background-color: #007bff;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.text-center img {
+    width: 100px;
+    opacity: 0.8;
+}
+
+/* Sidebar styles */
+.card.mb-3 {
+    border: 1px solid #e9ecef;
+}
+
+.card.mb-3 .form-control {
+    border: 1px solid #ddd;
+}
+
+.card.mb-3 .btn-primary {
+    padding: 10px 20px;
+}
+
+.dlist-align dt {
+    font-weight: bold;
+    color: #555;
+}
+
+.dlist-align dd {
+    font-size: 14px;
+    color: #333;
+}
+
+.dlist-align span {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .btn-outline-secondary,
+    .btn-primary {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .card-body .price-wrap .price {
+        font-size: 16px;
+    }
+}

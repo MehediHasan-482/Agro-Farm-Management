@@ -1,0 +1,143 @@
+/* product_detail.css */
+
+/* Big Image Section */
+.img-big-wrap {
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.img-big-wrap img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.img-big-wrap img:hover {
+    transform: scale(1.05);
+}
+
+/* Thumbnails Section */
+.thumbs-wrap {
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.item-thumb {
+    margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.item-thumb img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 2px solid transparent;
+}
+
+.item-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Rating Section */
+.rating-stars {
+    margin-bottom: 15px;
+}
+
+.rating-stars .fa-star {
+    color: #FFD700;
+}
+
+.label-rating {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Price Section */
+.price h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.text-muted {
+    color: #777;
+}
+
+/* Product Info Section */
+.content-body {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.content-body h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-outline-primary {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Section Background */
+.section-content {
+    background-color: #f9f9f9;
+}
+
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .thumbs-wrap {
+        overflow-x: auto;
+    }
+
+    .thumbs-wrap .item-thumb {
+        margin-right: 5px;
+    }
+
+    .content-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

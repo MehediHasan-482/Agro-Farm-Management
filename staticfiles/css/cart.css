@@ -1,0 +1,206 @@
+/* shopping_cart.css */
+
+/* General Card Styling */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Product List Table */
+.table-shopping-cart {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-shopping-cart th,
+.table-shopping-cart td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table-shopping-cart th {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.table-shopping-cart td {
+    background-color: #ffffff;
+}
+
+/* Product Image and Title */
+.itemside {
+    display: flex;
+    align-items: center;
+}
+
+.itemside .aside {
+    margin-right: 15px;
+}
+
+.itemside .img-sm {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.itemside .info {
+    flex: 1;
+}
+
+.itemside .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.itemside .title:hover {
+    text-decoration: underline;
+}
+
+.itemside .text-muted {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Price Section */
+.price-wrap {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.price-wrap small {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.table-shopping-cart td .price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Action Buttons */
+.btn-light {
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 25px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 15px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Sidebar Styling */
+.card-body form {
+    margin-top: 10px;
+}
+
+.card-body .input-group {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card-body .input-group input {
+    border-radius: 0;
+    border-right: none;
+}
+
+.card-body .input-group button {
+    border-radius: 0;
+}
+
+.card-body .form-group {
+    margin-bottom: 20px;
+}
+
+/* Total Price Section */
+.dlist-align dt {
+    font-weight: 600;
+    color: #333;
+}
+
+.dlist-align dd {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.dlist-align dd.text-right {
+    font-size: 18px;
+}
+
+.dlist-align dd h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Success Alert */
+.alert-success {
+    border: 1px solid #28a745;
+    color: #155724;
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.alert-success .icontext {
+    display: flex;
+    align-items: center;
+}
+
+.alert-success .icontext .icon {
+    margin-right: 10px;
+}
+
+/* Payment Icons */
+.text-center img {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+
+    .table-shopping-cart th,
+    .table-shopping-cart td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .itemside .img-sm {
+        width: 50px;
+        height: 50px;
+    }
+
+    .itemside .title {
+        font-size: 14px;
+    }
+
+    .price-wrap {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,47 @@
+{% extends "base/base.html" %}
+
+{% block start %}
+<div class="outer-container py-5">
+    <div class="container custom-container">
+        <!-- Highlight Bar Slider -->
+        <div id="couponSlider" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                {% for coupon in coupons %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="custom-slider-style shadow">
+                        <div class="coupon-card text-center p-3">
+                            <div class="running-text">
+                                <span>
+                                    Coupon Code: <strong>{{ coupon.coupon_code }}</strong> | 
+                                    Discount: <strong>{{ coupon.discount_price }}</strong> Tk | 
+                                    Minimum Amount: <strong>{{ coupon.minimum_amount }}</strong> Tk
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-3">
+                <figure class="card card-product-grid">
+                    <div class="img-wrap"> 
+                        <img src="/media/{{ product.product_images.first.image }}" class="img-fluid">
+                    </div>
+                    <figcaption class="info-wrap border-top">
+                        <a href="{% url 'get_product' product.slug %}" class="title">
+                            <b>{{ product.product_name }}</b>
+                        </a>
+                        <div class="price mt-2">Per_kg_cost: {{ product.per_kg_cost }}.00 Tk</div> 
+                    </figcaption>
+                </figure> 
+            </div>  
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

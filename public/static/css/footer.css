@@ -1,0 +1,57 @@
+/* Footer Styling */
+.footer {
+    background-color: #94b63e;
+    /* Light green background */
+    color: #2b4f2f;
+    /* Dark green text for contrast */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Section Titles */
+.footer h3 {
+    color: #2b4f2f;
+    /* Dark green for section headers */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Links */
+.footer a {
+    color: #3f6b45;
+    /* Dark green links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #f5e050;
+    /* Golden color on hover */
+}
+
+/* Social Media Icons */
+.footer .fab {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.footer .fab:hover {
+    transform: scale(1.2);
+    /* Slight zoom on hover */
+    color: #f5e050;
+    /* Golden hover color */
+}
+
+/* Payment Methods */
+.footer_paymentmethod img {
+    max-height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields */
+.footer input[type="email"] {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #2a561c;
+}

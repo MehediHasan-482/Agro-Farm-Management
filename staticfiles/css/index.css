@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Disable horizontal scrolling */
+}
+/* Custom Container Width */
+.custom-container {
+    max-width: 1400px;
+    /* Adjust this value to increment the container width */
+    padding: 0 30px;
+    /* Adjust padding if needed */
+    margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .custom-container {
+        max-width: 95%;
+        /* Ensure it remains responsive on smaller screens */
+        padding: 0 15px;
+    }
+}
+
+/* Container */
+.container-fluid {
+    padding: 0;
+}
+
+/* Slider Styles */
+.custom-slider-style {
+    background: linear-gradient(135deg, #28a745, #85d99a);
+    border-radius: 0;
+    /* Full-width design */
+    padding: 20px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    /* Ensures the animation stays within bounds */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.coupon-card {
+    max-width: 100%;
+    /* Full-width card */
+    margin: 0 auto;
+    color: #fff;
+}
+
+/* Running Text Styles */
+.running-text {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.running-text span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 20s linear infinite;
+    /* Adjust the duration to slow down */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+        /* Start from the right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* End at the left */
+    }
+}
+
+/* Additional Styling */
+.custom-slider-style {
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+}
+
+.coupon-card {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Product Card Styles */
+.card-product-grid {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.card-product-grid .img-wrap {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.card-product-grid .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-product-grid:hover .img-wrap img {
+    transform: scale(1.1);
+}
+
+.card-product-grid .info-wrap {
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-top: 2px solid #f1f1f1;
+}
+
+.card-product-grid .info-wrap .title {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-product-grid .info-wrap .title:hover {
+    color: #28a745;
+}
+
+.card-product-grid .price {
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .running-text {
+        font-size: 16px;
+    }
+
+    .card-product-grid .info-wrap .title {
+        font-size: 14px;
+    }
+
+    .card-product-grid .price {
+        font-size: 12px;
+    }
+}

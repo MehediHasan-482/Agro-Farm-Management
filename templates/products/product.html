@@ -1,0 +1,119 @@
+{% extends "base/base.html" %}
+
+{% block start %}
+
+<section class="section-content padding-y sm">
+    <div class="container">
+
+        <div class="card">
+            <div class="row no-gutters">
+                <aside class="col-md-6">
+                    <article class="gallery-wrap"> 
+                        <!-- Big Image Section -->
+                        <div class="img-big-wrap">
+                            <div>
+                                <a href="#" id="big-image-link">
+                                    <img id="big-image" src="/media/{{product.product_images.first.image}}" alt="Big Image">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Thumbnails Section -->
+                        <div class="thumbs-wrap">
+                            {% for image in product.product_images.all %}
+                                <a href="#" class="item-thumb" data-image="/media/{{image.image}}">
+                                    <img src="/media/{{image.image}}" alt="Thumbnail">
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </article>
+                </aside>
+
+                <main class="col-md-6 border-left">
+                    <article class="content-body">
+                        <h2 class="title">{{ product.product_name }}</h2>
+
+                        <div class="rating-wrap my-3">
+                            <ul class="rating-stars">
+                                <li style="width:80%" class="stars-active"> 
+                                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                </li>
+                                <li>
+                                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                </li>
+                            </ul>
+                            <small class="label-rating text-muted">132 reviews</small>
+                            <small class="label-rating text-success">
+                                <i class="fa fa-clipboard-check"></i> 154 orders 
+                            </small>
+                        </div>
+
+                        <div class="mb-3"> 
+                            <var class="price h4">{{ product.per_kg_cost }}.00 Tk</var> 
+                            <span class="text-muted">/per kg</span> 
+                        </div>
+
+                        <p>{{ product.product_discription }}</p>
+
+                        <dl class="row">
+                            <dt class="col-sm-4">Caste</dt>
+                            <dd class="col-sm-8">{{ product.category.category_name }}</dd>
+
+                            <dt class="col-sm-4">Weight</dt>
+                            <dd class="col-sm-8">{{ product.weight }} Kg</dd>
+
+                            <dt class="col-sm-4">Color</dt>
+                            <dd class="col-sm-8">{{ product.colour }}</dd>
+
+                            <dt class="col-sm-4">Delivery</dt>
+                            <dd class="col-sm-8">Bangladesh, India, Pakistan</dd>
+                        </dl>
+
+                        <hr>
+                        <!-- Buttons in Equal Divs -->
+                        <div class="d-flex justify-content-between">
+    <!-- Buy Now Button -->
+    <div class="flex-grow-1 me-2">
+        <a href="{% url 'buy_now' product.u_id %}" class="btn btn-primary w-100">
+            Buy now
+        </a>
+    </div>
+    <!-- Add to Cart Button -->
+    <div class="flex-grow-1 ms-2">
+        <a href="{% url 'add_to_cart' product.u_id %}?category={{ product.category.category_name }}" 
+            class="btn btn-outline-primary w-100">
+            <span class="text">Add to cart</span>
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </div>
+</div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // JavaScript for handling thumbnail clicks
+    document.addEventListener("DOMContentLoaded", function() {
+        const thumbnails = document.querySelectorAll(".item-thumb");
+        const bigImage = document.getElementById("big-image");
+        const bigImageLink = document.getElementById("big-image-link");
+
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener("click", function(e) {
+                e.preventDefault(); // Prevent the default link behavior
+                const newImageSrc = this.getAttribute("data-image");
+                bigImage.src = newImageSrc; // Update the big image source
+                bigImageLink.href = newImageSrc; // Update the link href
+            });
+        });
+    });
+</script>
+
+{% endblock %}

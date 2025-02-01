@@ -1,0 +1,106 @@
+{% extends "base/base.html" %}
+{% block start %}
+{% load static %}
+
+<section class="section-content padding-y" style="min-height: 84vh;">
+  <div class="container-center">
+    <div class="payment-form-container">
+      <h2 class="payment-form-title">Payment Form</h2>
+      <form method="POST" action="{% url 'process_payment' %}">
+        {% csrf_token %}
+        {% include "base/alert.html" %}
+        
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <div id="email" class="form-control email-display">{{ user.email }}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="4"
+            class="form-control"
+            placeholder="Enter your address"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <div id="amount" class="form-control amount-display">{{ amount }}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="payment_method">Payment Method:</label>
+          <select
+            id="payment_method"
+            name="payment_method"
+            class="form-control"
+          >
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+            <option value="Bkash">Bkash</option>
+            <option value="Nagad">Nagad</option>
+            <option value="Rocket">Rocket</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="trnx">Transaction ID:</label>
+          <input
+            type="text"
+            id="trnx"
+            name="trnx"
+            class="form-control"
+            placeholder="Enter transaction ID"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          Submit Payment
+        </button>
+      </form>
+
+      <br />
+
+      <!-- Added Section for Payment Information -->
+      <div class="payment-info">
+        <h3>Payment Information</h3>
+        <p>
+          For mobile payments (Bkash, Nagad, Rocket), please use the following number: 
+          <strong>+880123456789</strong>
+        </p>
+        <p>
+          For card payments (Credit/Debit), please use the card number:
+          <strong>1234-5678-9012-3456</strong>
+        </p>
+        <p>
+          Ensure you enter the correct Transaction ID for mobile payments.
+        </p>
+      </div>
+      <!-- End of Payment Information -->
+
+      <br />
+      <a
+        href="{% url 'download_pdf' %}"
+        class="btn btn-link"
+      >
+        Download Payment Slip
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

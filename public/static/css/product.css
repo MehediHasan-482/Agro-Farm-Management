@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Product Page Card */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.card .row.no-gutters {
+    align-items: center;
+}
+
+/* Gallery Section */
+.img-big-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.img-big-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.thumbs-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbs-wrap .item-thumb {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.thumbs-wrap .item-thumb:hover {
+    border-color: #007bff;
+}
+
+.thumbs-wrap img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Content Section */
+.content-body {
+    padding: 20px;
+}
+
+.content-body .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.content-body .rating-stars {
+    display: inline-block;
+}
+
+.content-body .rating-stars .fa-star {
+    color: #f1c40f;
+}
+
+.content-body .price {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.content-body p {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Buttons: Buy Now and Add to Cart */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Buy Now Button */
+.btn-primary {
+    background-color: #28a745;
+    /* Green for Buy Now */
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Add to Cart Button */
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Align Buttons Side by Side */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    flex: 1;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .img-big-wrap {
+        height: 300px;
+    }
+
+    .thumbs-wrap img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .content-body .title {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

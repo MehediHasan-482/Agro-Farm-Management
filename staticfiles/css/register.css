@@ -1,0 +1,139 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #a6c0fe, #f68084);
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Container */
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 15px;
+    background-color: #f4f7fc;
+}
+
+/* Card Container for Centering */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    max-width: 400px;
+    /* Set fixed width for the card */
+    width: 100%;
+    /* Allow card to be responsive */
+    padding: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 50px;
+    /* Adding top margin for spacing */
+}
+
+.card:hover {
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+}
+
+/* Card Title */
+.card-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.form-control {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Text */
+.text-center {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .card {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .form-control {
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 14px;
+    }
+}

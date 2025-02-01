@@ -1,0 +1,110 @@
+/* farm_theme.css */
+
+/* Global Background */
+body {
+    background-color: #f9f7f2;
+    /* Light farm-inspired beige */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #355e3b;
+    /* Deep green */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #d4a017;
+    /* Golden hover effect */
+}
+
+/* Brand Logo */
+.brand-wrap .logo {
+    max-height: 80px;
+}
+
+/* Search Bar */
+.search .form-control {
+    border: 2px solid #d4a017;
+    /* Golden border */
+}
+
+.search .btn-primary {
+    background-color: #355e3b;
+    border: 2px solid #d4a017;
+}
+
+.search .btn-primary:hover {
+    background-color: #d4a017;
+    border-color: #355e3b;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #d4a017;
+    /* Golden color */
+    border-color: #355e3b;
+}
+
+.btn-primary:hover {
+    background-color: #355e3b;
+    /* Dark green on hover */
+    color: white;
+}
+
+/* Cart Badge */
+.badge-danger.notify {
+    background-color: #d4a017;
+    color: #355e3b;
+}
+
+/* .custom-marker > ::marker{
+    color:blue;
+    font-size: 1em;
+    content:'Hello';
+    font-family:'Fort Awesome 5 Free';
+    font-weight:700;
+} */
+
+/* Footer */
+footer {
+    background-color: #355e3b;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #d4a017;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Widget Cards */
+.widget-header {
+    background-color: #f2efe6;
+    /* Light beige */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.widget-header .icon {
+    color: #355e3b;
+}
+
+/* Custom Styling for Links */
+a {
+    color: #355e3b;
+}
+
+a:hover {
+    color: #d4a017;
+    text-decoration: underline;
+}
+

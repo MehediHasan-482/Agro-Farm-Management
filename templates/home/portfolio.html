@@ -1,0 +1,86 @@
+{% extends "base/base.html" %}
+
+{% block start %}
+    <!-- Portfolio Section -->
+    <div class="portfolio-section">
+        <h1 class="section-title">Our Portfolio</h1>
+        <div class="portfolio-container">
+            <!-- Left side: Portfolio Items -->
+            <div class="portfolio-items">
+                {% for item in portfolio %}
+                    <div class="portfolio-item">
+                        <!-- Title -->
+                        <div class="portfolio-header">
+                            <h2>{{ item.title }}</h2>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="portfolio-description">
+                            <p>{{ item.description }}</p>
+                        </div>
+
+                        <!-- Vision Section -->
+                        {% if item.vision %}
+                            <div class="portfolio-vision">
+                                <h3>Vision</h3>
+                                <p>{{ item.vision }}</p>
+                            </div>
+                        {% endif %}
+
+                        <!-- Mission Section -->
+                        {% if item.mission %}
+                            <div class="portfolio-mission">
+                                <h3>Mission</h3>
+                                <p>{{ item.mission }}</p>
+                            </div>
+                        {% endif %}
+
+                        <!-- Framework Image Section -->
+                        {% if item.framework_image %}
+                            <div class="portfolio-image">
+                                <h4>Framework Image</h4>
+                                <img src="{{ item.framework_image.url }}" alt="{{ item.title }} Framework Image">
+                            </div>
+                        {% endif %}
+
+                        <!-- Related Document Section -->
+                        {% if item.document %}
+                            <div class="portfolio-document">
+                                <h4>Related Document</h4>
+                                <a href="{{ item.document.url }}" target="_blank" class="download-link">Download Document</a>
+                            </div>
+                        {% endif %}
+
+                        <!-- Health Monitoring Document Section -->
+                        {% if item.health_monitoring_document %}
+                            <div class="portfolio-health-document">
+                                <h4>Health Monitoring Document</h4>
+                                <a href="{{ item.health_monitoring_document.url }}" target="_blank" class="download-link">Download Health Monitoring Document</a>
+                            </div>
+                        {% endif %}
+
+                        <!-- Health Monitoring Image Section -->
+                        {% if item.health_monitoring_image %}
+                            <div class="portfolio-health-image">
+                                <h4>Health Monitoring Image</h4>
+                                <img src="{{ item.health_monitoring_image.url }}" alt="{{ item.title }} Health Monitoring Image">
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Right side: Farm Overview Images -->
+            <div class="farm-overview">
+                <h2>Farm Overview</h2>
+                <div class="overview-images">
+                    {% for image in farm_overview_images %}
+                        <div class="overview-image">
+                            <img src="{{ image.url }}" alt="Farm Overview Image">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

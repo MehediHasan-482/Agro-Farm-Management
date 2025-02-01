@@ -1,0 +1,72 @@
+{% load static %}
+<div class="footer bg-light-green text-dark py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-sm-6 col-md-4 col-xs-12 footer_menu">
+                <h3>Contact</h3>
+                <ul class="list-unstyled">
+                    <li class="footer_contact">
+                        <i class="fa fa-phone"></i>
+                        <span>+01789345506</span>
+                    </li>
+                    <li class="footer_contact">
+                        <i class="fa fa-envelope"></i>
+                        <span>mehedi89345506@gmail.com</span>
+                    </li>
+                    <li class="footer_contact">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Mirpur, Dhaka</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="col-sm-6 col-md-4 col-xs-12 footer_news">
+                <h3>We accept payment via</h3>
+                <div class="footer_paymentmethod">
+                    <img src="/media/profile/bkash.png" alt="Bkash" />
+					<img src="/media/profile/rocket.png" alt="Rocket" />
+					<img src="/media/visacard1.png" alt="Visa Card" />
+                </div>
+            </div>
+
+            <!-- Additional Functionality -->
+            <div class="col-sm-6 col-md-4 col-xs-12">
+                <h3>Quick Links</h3>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="text-dark">Farm Products</a></li>
+                    <li><a href="/farm/blog" class="text-dark">Farm Blog</a></li>
+                    <li><a href="/farm/contact" class="text-dark">Contact Us</a></li>
+                </ul>
+                <h3>Subscribe to Newsletter</h3>
+                <form action="/subscribe" method="POST">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-warning">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr class="bg-dark">
+        <div class="row">
+            <!-- Social Media Links -->
+            <div class="col-md-12 text-center">
+                <a href="https://facebook.com" class="text-dark mx-2">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
+                <a href="https://twitter.com" class="text-dark mx-2">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://instagram.com" class="text-dark mx-2">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <p class="mt-3">© 2024 Agro-Farm Management. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
